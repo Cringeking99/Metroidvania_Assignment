@@ -124,6 +124,56 @@
                     "isPartOfComposite": true
                 }
             ]
+        },
+        {
+            "name": "bonus_actions",
+            "id": "81550d5a-f42a-44c8-9c68-49dff39fde7c",
+            "actions": [
+                {
+                    "name": "WallClimb",
+                    "type": "Value",
+                    "id": "2495718c-53c5-4e5f-8c87-d7ff4ac025d2",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "1D Axis",
+                    "id": "51ecc6bf-4c8d-4ee9-8720-fe769b5757a3",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "WallClimb",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "cde82b96-0db3-46c0-8e3e-0c48319fd704",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "WallClimb",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "98752ace-9956-42fd-8e75-318fa8ef1d81",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "WallClimb",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                }
+            ]
         }
     ],
     "controlSchemes": [

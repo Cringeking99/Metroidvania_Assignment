@@ -12,7 +12,7 @@ public class Player_Character : MonoBehaviour
     public float Jumpforce = 5f;
 
     [SerializeField] private Transform groundCheck;
-    [SerializeField] private float groundCheckRadius = 0.2f;
+    
     [SerializeField] private LayerMask groundLayer;
 
     private void FixedUpdate()
@@ -44,6 +44,8 @@ public class Player_Character : MonoBehaviour
         return hit;
       
     }
+
+    //Add a wallclimb feature u dummby. with the wall feature.
 }
     
 
