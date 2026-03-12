@@ -2972,6 +2972,10 @@ MonoBehaviour:
   Movemmentspeed: 35
   Jumpforce: 17
   groundCheck: {fileID: 0}
+  WallCheck: {fileID: 0}
+  WallLayer:
+    serializedVersion: 2
+    m_Bits: 0
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -2990,7 +2994,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -3183,6 +3187,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: f73fa916-5664-42fe-9f6c-c06d23bfd88c
     m_ActionName: 'Main/Up[/Keyboard/space]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2495718c-53c5-4e5f-8c87-d7ff4ac025d2
+    m_ActionName: 'bonus_actions/WallClimb[/Keyboard/s,/Keyboard/w]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Main
@@ -3316,7 +3324,7 @@ Transform:
   m_GameObject: {fileID: 1603635558}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.000008055475, w: -1}
-  m_LocalPosition: {x: 2.2, y: -13.5, z: 0}
+  m_LocalPosition: {x: 2.9, y: -20, z: 0}
   m_LocalScale: {x: 27.280155, y: 4.6636, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3450,7 +3458,7 @@ Transform:
   m_GameObject: {fileID: 1627162125}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.000008055475, w: -1}
-  m_LocalPosition: {x: 33.2, y: -4.9, z: 0}
+  m_LocalPosition: {x: 33.6, y: -14.3, z: 0}
   m_LocalScale: {x: 27.280155, y: 4.6636, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4405,7 +4413,7 @@ GameObject:
   - component: {fileID: 2142185736}
   - component: {fileID: 2142185735}
   - component: {fileID: 2142185734}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Square (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

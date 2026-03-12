@@ -1,3 +1,4 @@
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -12,7 +13,8 @@ public class Player_Character : MonoBehaviour
     public float Jumpforce = 5f;
 
     [SerializeField] private Transform groundCheck;
-    
+    [SerializeField] private Transform WallCheck;
+    [SerializeField] private LayerMask WallLayer;
     [SerializeField] private LayerMask groundLayer;
 
     private void FixedUpdate()
@@ -45,7 +47,28 @@ public class Player_Character : MonoBehaviour
       
     }
 
-    //Add a wallclimb feature u dummby. with the wall feature.
+    public void WallJump(InputAction.CallbackContext context)
+    {
+        if (context.started && IsWalled())
+        {
+            Debug.Log("Wall Jump");
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, Jumpforce);
+        }
+    }
+
+       
+        
+
+
+        private bool IsWalled()
+    {
+        RaycastHit2D hit;
+
+        hit = Physics2D.Raycast(this.transform.position, Vector2.down, 7f, WallLayer);
+        Debug.DrawRay(this.transform.position, Vector2.down, Color.green, WallLayer);
+        return hit;
+    }
+    // this doesnt work u dummby fix it or ill get you. 
 }
     
 
